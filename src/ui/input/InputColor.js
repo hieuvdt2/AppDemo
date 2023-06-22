@@ -1,9 +1,3 @@
-// import React, { useState } from "react";
-
-// import Dropdown from "antd/lib/dropdown";
-// import { SketchPicker } from "react-color";
-// import { Button } from "../button";
-// import { Input } from "./Input";
 import React, { useState } from "react";
 import Input from "antd/lib/input";
 import Button from "antd/lib/button";
@@ -54,7 +48,6 @@ export  function InputColor({
               style={{ background: internalColor }}
               className="absolute right-3 -translate-y-[50%] top-[50%]"
             >
-              {" "}
             </Button>
           </Dropdown>
         
