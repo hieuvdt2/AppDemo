@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/hieuvdt2/AppDemo.git/static/css/main.cf85c677.css",
-    "main.js": "/hieuvdt2/AppDemo.git/static/js/main.d2b23f1e.js",
-    "static/js/478.e3e8ccab.chunk.js": "/hieuvdt2/AppDemo.git/static/js/478.e3e8ccab.chunk.js",
-    "static/js/23.67ae053a.chunk.js": "/hieuvdt2/AppDemo.git/static/js/23.67ae053a.chunk.js",
-    "static/js/165.ec60be21.chunk.js": "/hieuvdt2/AppDemo.git/static/js/165.ec60be21.chunk.js",
-    "static/js/339.25830080.chunk.js": "/hieuvdt2/AppDemo.git/static/js/339.25830080.chunk.js",
-    "static/js/880.d5260853.chunk.js": "/hieuvdt2/AppDemo.git/static/js/880.d5260853.chunk.js",
-    "static/js/787.28cb0dcd.chunk.js": "/hieuvdt2/AppDemo.git/static/js/787.28cb0dcd.chunk.js",
-    "static/js/640.fe81e1fa.chunk.js": "/hieuvdt2/AppDemo.git/static/js/640.fe81e1fa.chunk.js",
-    "static/js/237.5603287a.chunk.js": "/hieuvdt2/AppDemo.git/static/js/237.5603287a.chunk.js",
-    "index.html": "/hieuvdt2/AppDemo.git/index.html",
-    "main.cf85c677.css.map": "/hieuvdt2/AppDemo.git/static/css/main.cf85c677.css.map",
-    "main.d2b23f1e.js.map": "/hieuvdt2/AppDemo.git/static/js/main.d2b23f1e.js.map",
-    "478.e3e8ccab.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/478.e3e8ccab.chunk.js.map",
-    "23.67ae053a.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/23.67ae053a.chunk.js.map",
-    "165.ec60be21.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/165.ec60be21.chunk.js.map",
-    "339.25830080.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/339.25830080.chunk.js.map",
-    "880.d5260853.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/880.d5260853.chunk.js.map",
-    "787.28cb0dcd.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/787.28cb0dcd.chunk.js.map",
-    "640.fe81e1fa.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/640.fe81e1fa.chunk.js.map",
-    "237.5603287a.chunk.js.map": "/hieuvdt2/AppDemo.git/static/js/237.5603287a.chunk.js.map"
+    "main.css": "/AppDemo.git/static/css/main.cf85c677.css",
+    "main.js": "/AppDemo.git/static/js/main.6b80ad0a.js",
+    "static/js/478.e3e8ccab.chunk.js": "/AppDemo.git/static/js/478.e3e8ccab.chunk.js",
+    "static/js/23.67ae053a.chunk.js": "/AppDemo.git/static/js/23.67ae053a.chunk.js",
+    "static/js/165.ec60be21.chunk.js": "/AppDemo.git/static/js/165.ec60be21.chunk.js",
+    "static/js/339.25830080.chunk.js": "/AppDemo.git/static/js/339.25830080.chunk.js",
+    "static/js/880.d5260853.chunk.js": "/AppDemo.git/static/js/880.d5260853.chunk.js",
+    "static/js/787.28cb0dcd.chunk.js": "/AppDemo.git/static/js/787.28cb0dcd.chunk.js",
+    "static/js/640.fe81e1fa.chunk.js": "/AppDemo.git/static/js/640.fe81e1fa.chunk.js",
+    "static/js/237.5603287a.chunk.js": "/AppDemo.git/static/js/237.5603287a.chunk.js",
+    "index.html": "/AppDemo.git/index.html",
+    "main.cf85c677.css.map": "/AppDemo.git/static/css/main.cf85c677.css.map",
+    "main.6b80ad0a.js.map": "/AppDemo.git/static/js/main.6b80ad0a.js.map",
+    "478.e3e8ccab.chunk.js.map": "/AppDemo.git/static/js/478.e3e8ccab.chunk.js.map",
+    "23.67ae053a.chunk.js.map": "/AppDemo.git/static/js/23.67ae053a.chunk.js.map",
+    "165.ec60be21.chunk.js.map": "/AppDemo.git/static/js/165.ec60be21.chunk.js.map",
+    "339.25830080.chunk.js.map": "/AppDemo.git/static/js/339.25830080.chunk.js.map",
+    "880.d5260853.chunk.js.map": "/AppDemo.git/static/js/880.d5260853.chunk.js.map",
+    "787.28cb0dcd.chunk.js.map": "/AppDemo.git/static/js/787.28cb0dcd.chunk.js.map",
+    "640.fe81e1fa.chunk.js.map": "/AppDemo.git/static/js/640.fe81e1fa.chunk.js.map",
+    "237.5603287a.chunk.js.map": "/AppDemo.git/static/js/237.5603287a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf85c677.css",
-    "static/js/main.d2b23f1e.js"
+    "static/js/main.6b80ad0a.js"
   ]
 }
