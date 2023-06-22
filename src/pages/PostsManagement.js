@@ -18,7 +18,6 @@ const PostsManagement = () => {
   const [users, setUsers] = useState();
   const [usersDisplay, setUsersDisplay] = useState();
   const { debounceValue: filterDebounce, loading } = useDebounce(filter, 500);
-console.log(users);
   const handleClickView = (user) => {
     setIsShowModal(true);
     setUserView(user);
