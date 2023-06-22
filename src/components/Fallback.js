@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui';
 
 
 const Fallback = () => {
 	const navigate = useNavigate();
+	useEffect(()=>{
+		navigate('/')
+	},[])
 	return (
 		<section class="flex items-center h-[100vh] sm:p-16 dark:bg-gray-900 dark:text-gray-100">
 			<div class="container flex flex-col items-center justify-center px-5 mx-auto my-8 space-y-8 text-center sm:max-w-md">
