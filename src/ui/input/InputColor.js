@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
+// import Dropdown from "antd/lib/dropdown";
+// import { SketchPicker } from "react-color";
+// import { Button } from "../button";
+// import { Input } from "./Input";
+import React, { useState } from "react";
+import Input from "antd/lib/input";
+import Button from "antd/lib/button";
 import Dropdown from "antd/lib/dropdown";
 import { SketchPicker } from "react-color";
-import { Button } from "../button";
-import { Input } from "./Input";
-
+import { Menu } from "antd";
 export  function InputColor({
   error,
   name,
@@ -36,8 +41,8 @@ export  function InputColor({
           )}
         </div>
         <div className="relative">
-          <Input
-            className="bg-gray-100 border gap-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        <Input
+            className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={internalColor || ""}
             onChange={(e) => {
               setInternalColor(e.target.value);
@@ -52,6 +57,7 @@ export  function InputColor({
               {" "}
             </Button>
           </Dropdown>
+        
         </div>
       </div>
     </>

@@ -7,6 +7,7 @@ import UserItem from "../components/user/UserItem";
 import useDebounce from "../hooks/useDebounce";
 import userApi from "../services/api/userApi";
 import { ManagementField } from "../utils/data/ManagementField";
+import { DropDownDatePicker, InputColor } from "../ui";
 const itemsPerPage = 10;
 
 const PostsManagement = () => {
@@ -52,6 +53,7 @@ const PostsManagement = () => {
   
   return (
     <Content content={`Posts Management`}>
+      <InputColor/>
       <h3>Posts Management</h3>
       <div className="flex flex-col h-full">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 h-[80%]">
