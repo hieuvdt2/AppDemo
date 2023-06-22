@@ -1,0 +1,127 @@
+
+import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
+import {Content} from "../components/index";
+import { ModalBase, DetailUser, Loading } from "../components/modal/index";
+import UserItem from "../components/user/UserItem";
+import useDebounce from "../hooks/useDebounce";
+import userApi from "../services/api/userApi";
+import { ManagementField } from "../utils/data/ManagementField";
+const itemsPerPage = 10;
+
+const PostsManagement = () => {
+  const [isShowModal, setIsShowModal] = useState(false);
+  const [userView, setUserView] = useState();
+  const [itemOffset, setItemOffset] = useState(0);
+  const [pageCount, setPageCount] = useState(0);
+  const [filter, setFilter] = useState();
+  const [users, setUsers] = useState();
+  const [usersDisplay, setUsersDisplay] = useState();
+  const { debounceValue: filterDebounce, loading } = useDebounce(filter, 500);
+console.log(users);
+  const handleClickView = (user) => {
+    setIsShowModal(true);
+    setUserView(user);
+  };
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % usersDisplay?.length;
+    setItemOffset(newOffset);
+  };
+
+  useEffect(() => {
+    setPageCount(Math.ceil(usersDisplay?.length / itemsPerPage));
+    setItemOffset(0);
+  }, [usersDisplay]);
+
+  useEffect(() => {
+    userApi
+      .getAllUser()
+      .then((res) => {
+        setUsers(res);
+        setUsersDisplay(res);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    setUsersDisplay(
+      users?.filter(
+        (o) => o.userId === +filterDebounce || o?.title.includes(filterDebounce)
+      )
+    );
+  }, [filterDebounce]);
+  
+  return (
+    <Content content={`Posts Management`}>
+      <h3>Posts Management</h3>
+      <div className="flex flex-col h-full">
+        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 h-[80%]">
+          <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <input
+              type="text"
+              className="w-full p-4 rounded-lg border outline-none"
+              placeholder="search here"
+              onChange={(e) => setFilter(e.target.value)}
+            />
+            <div className="overflow-hidden">
+              <table className="min-w-full">
+                <thead className="border-b">
+                  <tr>
+                    {ManagementField?.map((o) => (
+                      <th
+                        key={o}
+                        scope="col"
+                        className="text-sm font-medium px-6 py-4 text-left "
+                      >
+                        {o}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {usersDisplay
+                    ?.filter((o, i) => i >= itemOffset)
+                    ?.map(
+                      (o, i) =>
+                        i < itemsPerPage && (
+                          <UserItem
+                            user={o}
+                            key={o.id}
+                            handleClickView={handleClickView}
+                          />
+                        )
+                    )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div className="mt-2">
+          <ReactPaginate
+            activeClassName={`text-xl font-extrabold `}
+            pageLinkClassName={``}
+            breakLabel="..."
+            nextLabel="Next"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            pageCount={pageCount}
+            previousLabel="Pre"
+            renderOnZeroPageCount={null}
+            className="pagination  flex justify-evenly rounded-full items-center"
+          />
+        </div>
+      </div>
+      <ModalBase visible={isShowModal} onClose={() => setIsShowModal(false)}>
+        <DetailUser
+          user={userView}
+          handleClose={() => setIsShowModal(false)}
+        ></DetailUser>
+      </ModalBase>
+      <ModalBase visible={loading}>
+        <Loading />
+      </ModalBase>
+    </Content>
+  );
+};
+
+export default PostsManagement;
